@@ -1,6 +1,8 @@
 package checktypes
 
 import (
+	"github.com/icefisher225/scorestack/dynamicbeat/pkg/checktypes/tcp"
+	"github.com/icefisher225/scorestack/dynamicbeat/pkg/checktypes/udp"
 	"github.com/scorestack/scorestack/dynamicbeat/pkg/check"
 	"github.com/scorestack/scorestack/dynamicbeat/pkg/checktypes/dns"
 	"github.com/scorestack/scorestack/dynamicbeat/pkg/checktypes/ftp"
@@ -59,6 +61,10 @@ func GetCheckType(c check.Config) check.Check {
 		def = &mssql.Definition{}
 	case "git":
 		def = &git.Definition{}
+	case "udp":
+		def = &udp.Definition{}
+	case "tcp":
+		def = &tcp.Definition{}
 	default:
 		zap.S().Warnf("check id %s had an invalid type: %s", c.ID, c.Type)
 		def = &noop.Definition{}

@@ -20,7 +20,7 @@ type Definition struct {
 }
 
 // Run a single instance of the check
-// For now we only support A record querries
+// For now we only support A record queries
 func (d *Definition) Run(ctx context.Context) check.Result {
 	// Initialize empty result
 	result := check.Result{Timestamp: time.Now(), Metadata: d.Config.Metadata}
