@@ -1,0 +1,11 @@
+{
+    "name": "UDP",
+    "type": "udp",
+    "score_weight": 1,
+    "definition": {
+        "IP": "1.1.1.1",
+        "Port": "9999",
+        "Payload": "Ping",
+        "Content": "Pong"
+    }
+}

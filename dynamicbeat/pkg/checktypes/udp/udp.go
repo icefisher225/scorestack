@@ -14,6 +14,7 @@ type Definition struct {
 	Config  check.Config
 	IP      string `optiontype:"required"`
 	Port    string `optiontype:"required"`
+	Payload	string `optiontype:"required"`
 	Content string `optiontype:"required"`
 }
 
@@ -39,7 +40,7 @@ func (d *Definition) Run(ctx context.Context) check.Result {
 	}
 
 	// Send a message to the server
-	_, err = conn.Write([]byte("Ping\n"))
+	_, err = conn.Write([]byte(d.Payload + "\n"))
 	if err != nil {
 		result.Message = fmt.Sprintf("Problem sending message to %s:%s with UDP: %s", d.IP, d.Port, err)
 	}

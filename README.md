@@ -16,3 +16,8 @@ If you think you've found a bug in Scorestack, please [submit a new issue](https
 If there's something you'd like to be added to Scorestack, [submit a new feature request](https://github.com/scorestack/scorestack/issues)! Alternatively, if you'd like a feature added for an upcoming competition, but you don't want information about the feature to be public, send us an email at `devs [at] scorestack [dot] io`. We can help you figure out how to add the features you need, and we _might_ even be able to do it for you.
 
 Please note - while we love to see Scorestack used at new competitions, this is still a side-project for the maintainers. We will do our best to respond to correspondence and issues quickly, but there may be some delay. Thanks for checking out Scorestack!
+
+Changes in this Repository
+--------------------------------
+- Added raw TCP check
+- Added raw UDP check
